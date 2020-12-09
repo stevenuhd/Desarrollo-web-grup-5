@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Accidente</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#basic-form").validate({
+                rules: {
+                    idi: { required: true, minlength: 1, maxlength: 4, number: true },
+                    fech: { required: true },
+                    hora: { required: true },
+                    lugar: { required: true, minlength: 1, maxlength: 150 },
+                    origen: { required: true, maxlength: 100 },
+                    cliente: { required: true },
+                    cons: { maxlength: 100 }
+                },
+                messages: {
+                    idi: {
+                        required: "Campo Requerido",
+                        minlength: "debe tener almenos 1 caracter",
+                        maxlength: "debe ser menor a 10000",
+                        number: "debe ser de tipo numerico"
+                    },
+                    fech: {
+                        required: "Campo Requerido"
+
+                    },
+                    hora: {
+                        required: "Campo Requerido"
+                    },
+                    lugar: {
+                        required: "Campo Requerido",
+                        minlength: "cantidad de caracteres mayor a cero",
+                        maxlength: "max 150 caracteres"
+
+                    },
+                    origen: {
+                        required: "Campo Requerido",
+                        maxlength: "maximo 100 caracteres"
+                    },
+                    cliente: {
+                        required: "Campo Requerido"
+
+                    },
+                    cons: {
+                        maxlength: "max 100 caracteres"
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    </head>
+
+    <body>
+        <header>
+<h1>Lista de accidente</h1>
+        </header>
+       
+
+        <form class="listacc" id="basic-form" action="" method="post">
+
+            <label for="idi">Identificador de accidente</label><br>
+            <input id="idi" type="text" name="idi"><br>
+            <br>
+            <label for="fech">Fecha accidente</label><br>
+            <input id="fech" type="date" name="fech">
+            <br>
+            <label for="hora">Hora</label><br>
+            <input id="hora" type="time" name="hora"><br>
+            <br>
+            <label for="lugar">Lugar</label><br>
+            <input id="lugar" type="text" name="lugar"><br>
+            <br>
+            <label for="origen">Origen</label><br>
+            <input id="origen" type="text" name="origen"><br>
+            <br>
+            <label for="cliente">Cliente</label><br>
+            <br>
+            <select style="width: 10%">
+                <option id="cli1" value="cli1">Marcos</option>
+                <option id="cli2" value="cli2">Mike</option>
+                <option id="cli3" value="cli3">Hanna</option>
+                <option id="cli4" value="cli4">James</option>
+                <option id="cli5" value="cli5">Macarena</option>
+            </select><br>
+
+            <br>
+            <label for="cons">Concecuencias</label><br>
+            <textarea id="cons" name="cons" rows="10" cols="50">
+            </textarea><span>(Opcional)</span><br>
+            <br>
+            <input class="submit" type="submit" value="Enviar">
+        </form>
+        <a href="index.html">Inicio</a>
+    </body>
+
+</html>

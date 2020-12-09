@@ -1,0 +1,91 @@
+<!DOCTYPE html >
+<html  lang="es">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico">
+	<script>
+	function Validaciones() {
+        var i, s, f, bueno;
+        var errores2="";
+                    f = "32765432";
+                    r = document.getElementById("rutt").value;
+                    largo=r.length - 2;
+                    bueno=false;
+                    s=0;
+                    for (i=0;i<largo;i++){
+                        s=s+(parseInt(r.charAt(i)) * parseInt(f.charAt(i)));
+                    }
+                    dv=11-(s%11);
+                    if (dv==10 && (r.charAt(9)=='K' || r.charAt(9)=='k')){
+                       
+                        bueno=true;
+                    }else{
+                        if (dv==11 && r.charAt(9)=='0'){
+                            bueno=true;
+                        }else{
+                            if (dv==parseInt(r.charAt(9))){
+                                bueno=true;
+                            }else{
+                                errores2 ="Ingrese un RUT valido, sin puntos y con guión"
+                                document.getElementById("rutt").focus();
+                                bueno=false;
+                            }
+                        }
+                    }
+                  
+        var pass = document.getElementById("login-pass").value;
+         var errores="";
+       
+      
+		if (pass == "") {
+			errores += "Ingresar contrasena valida" + "\n";
+		}  	
+		if (pass.length  >20){
+			errores += "Contrasena excede caracter max.20" +"\n";
+        }
+		if (errores == "" && bueno==true) {
+         
+               window.location.href = "listadousuarios.html"
+            }	
+         else{
+                alert(errores+""+ errores2)          
+                }   
+	 	 }
+        
+</script>
+</head>
+<center>
+<body>
+    <header>
+    <h1>Login</h1>
+    </header>
+
+	
+	<form class="log">
+        <div class="rut1">
+        Rut : <input type="text" name="rut" id="rutt"placeholder="XXXXXXXX-Y"/> <br>
+        </div>
+        <br>
+        <div class="pass1">
+        Clave : <input type="password" class="login-field" value="" placeholder="Contrasena" id="login-pass"><br>
+        </div>
+		<br>
+		<button type="button" value="Ingresar" onclick="Validaciones();" >ingresar</button>
+
+	</form>
+</center>
+	
+</body>
+<br>
+        <br>
+        <br>
+        <br>
+        <a href="index.html">Volver a Inicio</a>
+        <br>
+        <br>
+        <br>
+        <br>
+</html>

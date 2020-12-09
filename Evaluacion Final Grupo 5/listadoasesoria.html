@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listasesoria</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Lista de asesoría</h1>
+</header>
+
+<div class="listase">
+    <table name="table" cellspacing="10" border="2">
+       
+        <tr>
+            <th>ID asesoria</th>
+            <th>Fecha</th>
+            <th>Nombre cliente</th>
+            <th>Nombre profesional</th>
+           
+            
+        </tr>
+        <br>
+
+        <tr>
+            <td>001</td>
+            <td>18/09/2020</td>
+            <td>Mike</td>
+            <td>Hanna</td>
+            <th><input type="submit" id="0" onclick="listadoasesoria(this)"value="Listado de mejora" name="modif"></th>
+          
+
+            <tr>
+                <td>002</td>
+                <td>20/15/2019</td>
+                <td>Henry</td>
+                <td>Patricio</td>
+                <th><input type="submit" id="1" onclick="listadoasesoria(this)" value="Listado de mejora" name="modif"></th>
+               
+                <tr>
+                    <td>003</td>
+                    <td>10/12/2020</td>
+                    <td>James</td>
+                    <td>Sofia</td>
+                    <th><input type="submit" id="2" onclick="listadoasesoria(this)" value="Listado de mejora" name="modif"></th>
+                   
+                    <tr>
+                        <td>004</td>
+                        <td>18/09/2020</td>
+                        <td>jhon</td>
+                        <td>mark</td>
+                        <th><input type="submit" id="3" onclick="listadoasesoria(this)" value="Listado de mejora" name="modif"></th>
+                  
+                        </table>
+
+      </div><br>
+
+      <input type="submit" value="color 1" class="color1">
+                        
+      <input type="submit" value="color 2" class="color2">
+                        
+      <input type="submit" value="color 3" class="color3">
+
+    <input type="button" name="Submit" value="Limpiar" onClick="location.reload()">
+
+    <p><a class="in" href="index.html">Inicio</a></p>
+       
+<script>
+        $(document).ready(function () {
+
+                $('.color1').click(function () {
+                    $('table').css('background', '#16697a');
+                    $('table').css('border', '#db6400');
+
+                });
+                $('.color2').click(function () {
+                    $('table').css('background', '#bbbbbb');
+                    $('table').css('border', '#fd3a69');
+
+                });
+                $('.color3').click(function () {
+                    $('table').css('background', '#9d0191');
+                    $('table').css('border', '#120078');
+
+                });
+            });
+</script>
+
+<Div>
+    <ul id="demo">
+
+
+    </ul>
+
+
+</body>
+
+</html>

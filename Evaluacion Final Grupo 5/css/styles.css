@@ -1,0 +1,482 @@
+
+/* *******************************GENERALES**************************************** */
+
+body {
+  background-color: #eeeeee;
+  font-family: Monospace;
+  margin: auto;
+  text-align: center;
+}
+
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+
+header {
+background-color: #00adb5;
+  padding: 15px;
+  text-align: center;
+  font-family: Courier;
+  margin: 0;
+}
+a{
+text-decoration: none;
+font-size: 25px;
+font-family: "Lucida Sans", sans-serif;
+  color: #00adb5;
+
+
+}
+
+h1 {
+  color: #393e46;
+  text-align: center;
+  padding: 50px 50px 50px 50px;
+}
+
+h2 {
+  color: #00adb5;
+  margin-bottom: 30px;
+}
+
+p {
+  color: #393e46;
+  font-family: cursive;
+  text-align: justify;
+}
+
+label {
+  color: #212529;
+  font-family: cursive;
+}
+
+th{
+  color:#00adb5;
+}
+
+.crear{
+  text-align: center;
+}
+
+form .error {
+
+  color: #ff0000;
+
+}
+.cont{
+margin-right: 900px;
+}
+/* ****************INDEX******************************************************** */
+.fot1 {
+  width: 30%;
+  height: auto;
+  margin-left: 800px;
+  border-radius: 100%;
+  position:absolute;
+  left:400px;
+  bottom: 200px;
+   float: right;
+  
+}
+.fot2{
+  width: 30%;
+  height: auto;
+  margin-right: 800px;
+  border-radius: 100%;
+  position:absolute;
+  right:400px;
+  top: 730px;
+ 
+   float: left;
+}
+.agpago{
+  width: 38px;
+  height: 20px;
+}
+
+
+.p1 {
+  font-size: 20px;
+  margin-left: 40px;
+  margin-bottom: 300px;
+  margin-top: 100px;
+}
+
+.p2 {
+  font-size: 20px;
+  margin-left: 950px;
+  
+
+}
+
+.p3 {
+  font-size: 20px;
+  margin-left: 650px;
+  margin-bottom: 100px;
+  padding: 100px 100px 100px 100px;
+ 
+}
+
+.todoo{
+ margin-top: 10px;
+
+}
+.todo{
+ background-color: #eeeeee;
+}
+.btn{
+background-color: #eeeeee;
+color: #212529;
+margin: 20px;
+
+}
+.contacti{
+ 
+background-color: #00adb5;
+font-size: 15px;
+padding: 20px auto;
+text-align: center;
+margin: 0;
+
+}
+/* ********RESPONSIVO****** */
+* {
+  box-sizing: border-box;
+}
+@media only screen and (max-width:600px) {
+  /* For mobile phones: */
+  .p1 {
+    width: 70%;
+  margin-left: 40px;
+  margin-bottom: 100px;
+  margin-top: 10px;
+  top: 10rem;
+  
+  }
+
+.fot1 {
+
+margin-left: 40px;
+bottom: auto;
+left: auto;
+}
+.p2 {
+  font-size: auto;
+  padding-top: 50px;
+  margin: 40px;
+} 
+.fot2 {
+ 
+top: auto;
+right: auto;
+margin: 10px 20px 20px 20px;
+left: 70px;
+}
+.p3 {
+  font-size: auto;
+  padding-top: 50px;
+  margin-left: 5px;
+  margin-top: 150px;
+}
+}
+
+
+@media only screen and (max-width:1100px) {
+  /* For mobile phones: */
+  .p1 {
+    width: 70%;
+  margin-left: 40px;
+  margin-bottom: 100px;
+  margin-top: 10px;
+  top: 10rem;
+  
+  }
+
+.fot1 {
+
+margin-left: 40px;
+bottom: auto;
+left: auto;
+width: 300px;
+}
+.p2 {
+  font-size: auto;
+  padding-top: 120px;
+  margin-left: 40px;
+  text-align: center;
+} 
+.fot2 {
+  margin-left: 20px;
+top: auto;
+right: auto;
+margin: 20px 40px 20px 20px;
+width: 300px;
+
+}
+.p3 {
+  font-size: auto;
+  padding-top: 50px;
+  margin-left: 5px;
+  margin-top: 150px;
+}
+}
+
+/* ************CONTACTO********* */
+.contacto{
+
+  margin: 50px;
+  
+}
+/* ********RESPONSIVO****** */
+@media only screen and (max-width:600px) {
+  /* For mobile phones: */
+
+.contacto{
+  font-size: 25px;
+  
+}
+input{
+  width: 250px;
+  height: 30px;
+}
+
+
+}
+/* ******CREARCAPACITACION******* */
+
+.creacap{
+
+margin: 50px;
+}
+/* ********RESPONSIVO****** */
+@media only screen and (max-width:600px) {
+  /* For mobile phones: */
+.creacap{
+font-size: 25px;
+  
+}
+input{
+  width: 250px;
+  height: 30px;
+
+}
+}
+
+
+/* ******LISTACAPACITACION******* */
+.listcap{
+margin: 50px 600px;
+}
+
+@media only screen and (max-width: 600px){
+  .listcap{
+   
+    margin: 40px;
+
+
+  }
+}
+
+/* ******LISTADOUSUARIO******* */
+.listus{
+margin: 50px 600px;
+width: 100%;
+}
+
+@media only screen and (max-width: 650px){
+  .listus{
+    margin: 1px;
+    padding: 15px;
+    
+ 
+  }
+}
+/* ******CREARUSUARIO******* */
+.crearusu{
+margin: 50px;
+}
+@media only screen and (min-width: 600px){
+  .crearusu{
+    font-size: 15px;
+    padding: 15px;
+    text-align: center;
+
+  }
+}
+/* ******CREARPAGO******* */
+.crearpag{
+  margin: 50px;
+}
+
+@media only screen and (min-width: 600px){
+  .crearpag{
+    font-size: 15px;
+    padding: 15px;
+   text-align: center;
+  }
+ 
+}
+
+.ini{
+   margin-right: 1800px;
+}
+
+/* ******EDITARADMIN******* */
+
+.editadm{
+margin: 50px;
+
+}
+@media only screen and (min-width: 500px){
+  .editadm{
+    font-size: 15px;
+    padding: 15px;
+    text-align: center;
+
+  }
+}
+
+/* ******EDITCLIENTE******* */
+
+.editcli{
+
+  margin: 50px;
+ 
+}
+@media only screen and (min-width: 500px){
+  .editcli{
+    font-size: 15px;
+    padding: 15px;
+    text-align: center;
+
+  }
+}
+
+/* ******EDITPROFESIONAL******* */
+.editpro{
+margin: 50px;
+
+}
+@media only screen and (min-width: 500px){
+  .editpro{
+    font-size: 15px;
+    padding: 15px;
+    text-align: center;
+
+  }
+}
+
+
+/* ******LISTAVISITA******* */
+
+.listvis{
+
+  margin: 50px 700px;
+  width: 25%;
+}
+@media only screen and (max-width: 650px){
+  .listvis{
+    margin: 10px;
+    padding: 15px;
+ 
+  }
+}
+
+
+/* ******CHECKLIST******* */
+.checlist{
+
+margin: 50px 700px 50px;
+
+}
+
+.volv{
+
+margin: 50px;
+
+
+}
+@media only screen and (max-width: 650px){
+  .checlist{
+    margin: 10px;
+    padding: 15px;
+ 
+  }
+}
+/* ******LISTADOPAGO******* */
+
+.listpag{
+
+  margin: 50px 700px 50px;
+  width: 25%;
+}
+.in{
+  margin: 50px;
+}
+@media only screen and (max-width: 650px){
+  .listpag{
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
+ 
+  }
+}
+/* ******LISTAASESORIA******* */
+.listase{
+  margin: 50px 700px 50px;
+}
+
+@media only screen and (max-width: 650px){
+  .listase{
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
+ 
+  }
+}
+
+
+/* ******REPORTES******* */
+.ini2{
+
+   margin-right: 1800px;
+   padding: 50px;
+   color: #00adb5;
+   font-size: 30px;
+
+
+}
+/* ******LOGIN******* */
+.log{
+
+margin: 50px;
+
+}
+
+.rut{
+
+  margin: 100px;
+}
+
+.pass1{
+margin: 30px;
+margin-left: 15px;
+
+}
+
+/* ******LISTACCIDENTE******* */
+.listacc{
+
+margin: 50px;
+
+
+}
+
+.display{
+
+  top-margin: 50px;
+}
+
+

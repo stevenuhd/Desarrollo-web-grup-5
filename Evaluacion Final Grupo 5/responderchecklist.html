@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0">
+  <title>check list</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+<center>
+
+<header>
+  <h1>Check list</h1>
+</header>
+ 
+  <br>
+  <form id="list" method="post" action="#">
+
+    <table cellspacing="10" ; border="3">
+
+      <tr>
+
+        <thead>
+          <th>Id visita</th>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Rut cliente</th>
+          <th>Nombre cliente</th>
+          <th>Check </th>
+        </thead>
+        <br>
+
+      <tr>
+        <td>001</td>
+        <td>16/09/2019</td>
+        <td>18:00</td>
+        <td>18987098-1</td>
+        <td id="check0">Marcos</td>
+        <td><input type="checkbox" name="checkbox"></td>
+
+
+      <tr>
+
+        <td>002</td>
+        <td>02/01/2020</td>
+        <td>18:00</td>
+        <td>19999765-1</td>
+        <td id="check1">Karen</td>
+        <td><input type="checkbox" name="checkbox"></td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>02/10/2001</td>
+        <td>20:30</td>
+        <td>19987627-0</td>
+        <td id="check2">Hanna</td>
+        <td><input type="checkbox" name="checkbox"></td>
+      </tr>
+
+      <td>004</td>
+      <td>19/01/2000</td>
+      <td>21:30</td>
+      <td>19987627-0</td>
+      <td id="check3">mike</td>
+      <td><input type="checkbox" name="checkbox"></td>
+      </tr>
+
+      <td>005</td>
+      <td>01/01/2005</td>
+      <td>28:30</td>
+      <td>19987627-0</td>
+      <td id="check4">James</td>
+      <td><input type="checkbox" name="checkbox"></td>
+      </tr>
+
+    </table>
+    <br>
+    <input type="button" name="Submit" value="Enviar" onClick="contar();">
+    <input type="button" name="Submit" value="Limpiar listado" onClick="location.reload()">
+  </form>
+  <Div>
+    <ul id="demo">
+
+
+    </ul>
+
+  </Div>
+  <script type="text/javascript">
+    function contar() {
+      var checkboxes = document.getElementById("list").checkbox;
+      var cont = 0;
+
+      for (var x = 0; x < checkboxes.length; x++) {
+        if (checkboxes[x].checked) {
+          cont = cont + 1;
+        }
+      }
+
+      if (cont == 0) {
+
+        alert("Error no chequeado");
+      }
+      else {
+        document.getElementById("demo").innerHTML = "<h1>Checkout</h1>";
+        for (var x = 0; x < checkboxes.length; x++) {
+          if (checkboxes[x].checked) {
+            var listado = document.getElementById("check" + x).innerHTML;
+            document.getElementById("demo").innerHTML += "<li>" + listado + "</li>";
+          }
+
+        }
+      }
+
+
+    }
+  </script>
+  <div class="volv">
+    <p><a href="listadovisitas.html">Volver a listado visitas</a></p>
+    <p><a href="index.html">Inicio</a></p>
+  </div>
+</body>
+
+</html>

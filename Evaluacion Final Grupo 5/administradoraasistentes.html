@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon.ico">
+  <script src="javascript.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+  <script src="http://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+  <title>Administradorasistente</title>
+  <!--Script para dar formato a la tabla de asistentes-->
+  <script>
+
+    $(document).ready(function () {
+      $('#tabla1').DataTable({
+        language: {
+          url: 'https://cdn.datatables.net/plug-ins/1.10.22/i18n/Spanish.json'
+        }
+      });
+
+
+    });
+  </script>
+
+  <!--Funcion: que agrega el nuevo asistente dentro de la tabla y valida los datos-->
+  <script type="text/javascript">
+    function validarasist() {
+      var errores = "";
+      var idasistente = document.getElementById("idasistente").value;
+      var nombrecompleto = document.getElementById("Nombrecompleto").value;
+      var Edad = document.getElementById("Edad").value;
+      var Correoeletronico = document.getElementById("Correoeletronico").value;
+      var telefono = document.getElementById("telefono").value;
+      var fecha = document.getElementById("fechayhora").value;
+
+
+      if (idasistente.length == 0 || idasistente == null || idasistente == "" || idasistente > 10000) {
+        errores += "ID Debe ser mayor a 0 y menor a 10000" + '\n';
+      }
+      if (nombrecompleto.length = 0 || nombrecompleto.length > 100 || nombrecompleto == "") {
+        errores += "Ingrese nombre completo (debe ser menor a 100 caracteres)" + '\n';
+      }
+      if (Edad < 0 || Edad > 150 || Edad == "") {
+        errores += "Ingrese la edad correcta (max 150)" + '\n';
+      }
+      if (Correoeletronico.length < 0 || Correoeletronico == "") {
+        errores += "Ingrese correo electrónico" + '\n';
+      }
+      if ((telefono.substr(0, 4)) != +569) {
+        errores += "El telefono debe empezar con el prefijo +569" + '\n';
+      }
+      if (telefono.length != 12 || telefono == "") {
+        errores += "Telefono debe ser asi +569XXXXXXXX" + '\n';
+      }
+      if (fecha == "") {
+        errores += "Seleccione una fecha y hora" + '\n';
+      }
+      if (errores == null || errores == "" || errores.length == 0) {
+        // alert(errores = "Datos ingresados correctamente ")  
+
+        document.getElementById("bodytable").innerHTML += "<tr>"
+          + "<td>" + idasistente + "</td>"
+          + "<td>" + nombrecompleto + "</td>"
+          // + "<td>" + Edad + "</td>"
+          + "<td>" + Correoeletronico + "</td>"
+          + "<td>" + telefono + "</td>"
+          + "<th><input type=submit value=Eliminar></th> "
+          + "</tr>";
+
+        document.getElementById("idasistente").value = ""
+        document.getElementById("Nombrecompleto").value = ""
+        document.getElementById("Edad").value = ""
+        document.getElementById("Correoeletronico").value = ""
+        document.getElementById("telefono").value = ""
+        document.getElementById("fechayhora").value = ""
+      }
+      else {
+        alert(errores)
+      }
+
+    }
+
+  </script>
+
+</head>
+
+<body>
+
+
+<header>
+  <h1>Lista de asistentes</h1>
+</header>
+
+
+  <table id="tabla1" class='display' style='width:100%' border="1">
+    <thead>
+      <th>Identificador asistente</th>
+      <th>Nombre</th>
+      <th>Correo electrónico</th>
+      <th>Teléfono</th>
+      <th></th>
+    </thead>
+    <br>
+    <tbody id="bodytable">
+      <tr>
+        <td>122</td>
+        <td>Marcos</td>
+        <td>Marcos111@gmail.com</td>
+        <td>+56912659847</td>
+        <th><input type="submit" value="Eliminar" name="modif"></th>
+      </tr>
+      <tr>
+        <td>123</td>
+        <td>Benjamin</td>
+        <td>Benjamin@gmail</td>
+        <td>+56725486398</td>
+        <th><input type="submit" value="Eliminar" name="modif"></th>
+      </tr>
+      <tr>
+        <td>124</td>
+        <td>Pablo</td>
+        <td>Pablo111@hotmail.com</td>
+        <td>+56845218765</td>
+        <th><input type="submit" value="Eliminar" name="modif"></th>
+      </tr>
+      <tr>
+        <td>125</td>
+        <td>Marcos2</td>
+        <td>Marcos222@gmail.com</td>
+        <td>+56912659847</td>
+        <th><input type="submit" value="Eliminar" name="modif"></th>
+      </tr>
+      <tr>
+        <td>126</td>
+        <td>Benjamin2</td>
+        <td>Benjamin@gmail</td>
+        <td>+56725486398</td>
+        <th><input type="submit" value="Eliminar" name="modif"></th>
+      </tr>
+      <tr>
+        <td>127</td>
+        <td>Pablo2</td>
+        <td>Pablo222@hotmail.com</td>
+        <td>+56845218765</td>
+        <th><input type="submit" value="Eliminar" name="modif"></th>
+      </tr>
+      <tr>
+        <td>128</td>
+        <td>Marcos3</td>
+        <td>Marcos333@gmail.com</td>
+        <td>+56912659847</td>
+        <th><input type="submit" value="Eliminar" name="modif"></th>
+      </tr>
+      <tr>
+        <td>129</td>
+        <td>Benjamin3</td>
+        <td>Benjamin@gmail</td>
+        <td>+56725486398</td>
+        <th><input type="submit" value="Eliminar" name="modif"></th>
+      </tr>
+      <tr>
+        <td>130</td>
+        <td>Pablo3</td>
+        <td>Pablo333@hotmail.com</td>
+        <td>+56845218765</td>
+        <th><input type="submit" value="Eliminar" name="modif"></th>
+      </tr>
+      <tr>
+        <td>131</td>
+        <td>Pablo4</td>
+        <td>Pablo444@hotmail.com</td>
+        <td>+56845218765</td>
+        <th><input type="submit" value="Eliminar" name="modif"></th>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <h2>Ingrese un nuevo asistente</h2>
+
+  <form class="inasistente" id="inasistente">
+    <div class="inasistente">
+      <label>Identificador de asistente</label>
+      <input type="text" name="idasistente" id="idasistente" placeholder="001">
+      <br>
+      <label>Nombre completo</label>
+      <input type="text" name="Nombrecompleto" id="Nombrecompleto" placeholder="nombre apellido">
+      <br>
+      <label>Edad</label>
+      <input type="text" name="Edad" id="Edad" placeholder="maximo 45">
+      <br>
+      <label>Correo electrónico</label>
+      <input type="email" name="Correoeletronico" id="Correoeletronico" placeholder="ejemplo@xxx.cl">
+      <br>
+      <label>Teléfono</label>
+      <input type="text" name="telefono" id="telefono" placeholder="+569XXXXXXXX">
+      <br>
+      <label>Fecha y hora </label>
+      <select id="fechayhora" name="fechayhora">
+        <option></option>
+        <option value="fechayhora1">11/05/2020 09:00hrs am Cliente 1</option>
+        <option value="fechayhora2">26/06/2020 11:15hrs am Cliente 2</option>
+        <option value="fechayhora3">28/08/2020 14:00hrs pm Clinete 3</option>
+      </select>
+      <br>
+      <br>
+
+      <input id='button' type="button" value="ingresar" onclick="validarasist();">
+    </div>
+  </form>
+  <style type="text/css">
+    .error {
+      color: #f00;
+    }
+  </style>
+
+
+</body>
+<br>
+<br>
+<br>
+<br>
+<a href="index.html">Volver a Inicio</a>
+<br>
+<br>
+<br>
+<br>
+
+</html>

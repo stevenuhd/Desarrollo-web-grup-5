@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="https://www.chartjs.org/dist/2.9.4/Chart.min.js"></script>
+    <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <title>Reportes</title>
+</head>
+
+<body>
+
+  
+
+    <center>
+        <header>
+            <h1>"Reportes"</h1>
+        </header>
+        <br>
+    
+     
+        <div id="container" style="width: 50%;">
+            <h2>"Grafico de Barra"</h2>
+            <canvas id="canvas"></canvas>
+
+        </div>
+        <br>
+        <br>
+        <div id="container2" style="width: 50%;">
+            <h2>"Grafico de lineas"</h2>
+            <canvas id="myChart"></canvas>
+        </div>
+        <br>
+        <br>
+        <div id="container3" style="width: 50%;">
+            <h2>"Grafico de torta"</h2>
+            <canvas id="myChart2"></canvas>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <script>
+            var MONTHS = ['Comuna 1', 'Comuna 2', 'Comuna 3', 'Comuna 4'];
+            var color = Chart.helpers.color;
+            var barChartData = {
+                labels: ['Comuna 1', 'Comuna 2', 'Comuna 3', 'Comuna 4'],
+                datasets: [{
+                    label: 'Clientes',
+                    backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+                    borderColor: window.chartColors.red,
+                    borderWidth: 1,
+                    data: [15, 26, 30, 90, 0]
+                }]
+
+            };
+
+            window.onload = function () {
+                var ctx = document.getElementById('canvas').getContext('2d');
+                window.myBar = new Chart(ctx, {
+                    type: 'bar',
+                    data: barChartData,
+                    options: {
+
+                        responsive: true,
+                        legend: {
+                            position: 'top',
+                        },
+                        // title: {
+                        // 	display: true,
+                        // 	text: 'Gráfico de barras'
+                        // }
+                    }
+                });
+
+            };
+
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+
+                data: {
+                    labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+
+                    datasets: [{
+                        label: ' Cantidad de accidente',
+                        data: [12, 19, 3, 5, 2, 3, 8, 13, 11, 7, 5, 10, 0],
+
+                        backgroundColor: ["transparent"],
+                        borderColor: ["red"],
+                        borderWidth: 1
+                    }, {
+                        label: ' Cantidad de visitas',
+                        data: [10, 12, 6, 9, 7, 3, 9, 15, 17, 14, 8, 10],
+
+                        backgroundColor: ["transparent"],
+                        borderColor: ["orange"],
+                        borderWidth: 1
+                    }
+                    ],
+
+                },
+
+                options: {
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    // title: {
+                    // 	display: true,
+                    // 	text: 'Gráfico de lineas'
+                    // }
+                }
+            });
+
+            var ctx = document.getElementById('myChart2').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['chequeos de visitas cumplidos', 'no cumplidos', 'cumplidos con observación'],
+
+                    datasets: [{
+                        label: ' Grafico de torta',
+                        data: [5, 2, 3],
+                        backgroundColor: ["green", 'red', 'yellow'],
+
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    // title: {
+                    // 	display: true,
+                    // 	text: 'Gráfico de torta'
+                    // }
+
+
+                }
+            });
+        </script>
+<a class="ini2" href="index.html">Inicio</a>
+    </center>
+
+</body>
+
+</html>

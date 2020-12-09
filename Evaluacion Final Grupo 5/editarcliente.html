@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>editarcliente</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+</head>
+
+<body>
+<header>
+  <h1>Editar cliente</h1>
+</header>
+
+  <div class="editcli">
+    <form class="cmxform" id="commentForm" method="get" action="">
+
+      <label for="no">Run cliente</label><br>
+      <input type="text" id="Runcliente" name="Runcliente" minlength="12" required><br>
+      <br>
+      <label for="no">Nombres</label><br>
+      <input type="text" name="Nombres" id="Nombres" minlength="2" required><br>
+      <br>
+      <label for="ap">Apellidos</label><br>
+      <input type="text" name="Apellidos" id="Apellidos" minlength="2" required><br>
+      <br>
+      <label for="te">Teléfono</label><br>
+      <input type="number" name="telefono" id="telefono" minlength="9" required><br>
+      <br>
+      <label for="te">AFP</label><br>
+      <input type="text" name="Afp" id="Afp" minlength="2" required><br>
+      <br>
+      <label for="te">Sistema de salud</label><br>
+      <select>
+        <option value="Fonasa">Fonasa</option>
+        <option value="Isapre">Isapre</option>
+      </select>
+      <br>
+
+      <br>
+      <label for="te">Dirección</label><br>
+      <input type="text" name="Dirección" id="Dirección" minlength="5" required><br>
+      <br>
+      <label for="te">Comuna</label><br>
+      <input type="text" name="Comuna" id="Comuna" minlength="3" required><br>
+      <br>
+      <label for="te">Edad</label><br>
+      <input type="text" name="Edad" id="Edad" minlength="2" required><br>
+      <br>
+      <input class="submit" type="submit" value="enviar">
+
+    </form>
+    <br>
+    <a href="listadousuarios.html">Volver</a>
+  </div>
+
+  <script>
+    jQuery.validator.messages.required = 'Campo obligatorio';
+
+    $("#commentForm").validate();
+
+  </script>
+  <style type="text/css">
+    .error {
+      color: #f00;
+    }
+  </style>
+
+</body>
+
+</html>
